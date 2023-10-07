@@ -1,4 +1,4 @@
-const Banner = () => {
+const Slider = () => {
   return (
     <div className="h-[1200px] bg-green-400">
       <p>banner</p>
@@ -6,4 +6,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Slider;
