@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div>
+    <div className="h-[1200px] bg-green-400">
       <p>banner</p>
     </div>
   );
