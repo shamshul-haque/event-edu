@@ -1,4 +1,4 @@
-import Banner from "../header/banner/Banner";
+import Banner from "../header/Banner";
 
 const Home = () => {
   return (
