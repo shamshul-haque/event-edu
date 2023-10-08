@@ -1,27 +1,38 @@
 import { Map, Marker } from "pigeon-maps";
 import { AiFillMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { GoLocation } from "react-icons/go";
 
 const Contact = () => {
   return (
-    <div className="px-4 md:px-8 lg:px-16">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+    <div className="px-4 md:px-8 lg:px-16 pt-10">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-black">
+        Contact With Us
+      </h1>
+      <div className="flex flex-col md:flex-row items-center justify-between gap-5 mt-5">
         <div className="flex-1 w-full space-y-10">
-          <div className="bg-white shadow-lg rounded p-10">
-            <div className="flex gap-3">
-              <BsFillTelephoneFill className="text-4xl text-red-500" />
-              <h2 className="text-2xl font-bold uppercase">Phone</h2>
+          <div className="bg-white shadow-lg rounded p-10 flex items-center gap-5">
+            <BsFillTelephoneFill className="text-2xl text-red-500" />
+            <div className="">
+              <p>+880 1406680846</p>
+              <p>+880 1644336343</p>
             </div>
-            <p className="pl-14 pt-3">+880 1406680846</p>
-            <p className="pl-14 pt-3">+880 1644336343</p>
           </div>
-          <div className="bg-white shadow-lg rounded p-10">
-            <div className="flex  gap-2">
-              <AiFillMail className="text-4xl text-red-500" />
-              <h2 className="text-2xl font-bold uppercase">Phone</h2>
+          <div className="bg-white shadow-lg rounded p-10 flex items-center gap-5">
+            <AiFillMail className="text-2xl text-red-500" />
+            <div className="">
+              <p>shamshul.haque.dev@gmail.com</p>
+              <p>shamshul.haque21@gmail.com</p>
             </div>
-            <p className="pl-14 pt-3">+880 1406680846</p>
-            <p className="pl-14 pt-3">+880 1644336343</p>
+          </div>
+          <div className="bg-white shadow-lg rounded p-10 flex items-center gap-5">
+            <GoLocation className="text-2xl text-red-500" />
+            <div className="">
+              <p>
+                Cultural Centre <br />
+                Road 9, Mirpur DOHS <br /> Dhaka 1216, Bangladesh
+              </p>
+            </div>
           </div>
         </div>
         <div className="flex-1 w-full bg-white shadow-lg rounded">
@@ -53,7 +64,7 @@ const Contact = () => {
                   <textarea
                     name="message"
                     cols="20"
-                    rows="5"
+                    rows="8"
                     placeholder="Write Message"
                     className="outline-0 border p-2 rounded"
                   ></textarea>
@@ -68,7 +79,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="pt-16">
+      <div className="pt-10">
         <Map
           height={300}
           defaultCenter={[23.82235, 90.365417]}
