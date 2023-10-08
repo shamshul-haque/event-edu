@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
 const ServiceItem = ({ service }) => {
-  console.log(service.length);
   const { image, name, short_description, button_text } = service;
+
   return (
     <div className="bg-white shadow-lg rounded ">
       <img src={image} alt={name} className="h-52 w-full rounded" />

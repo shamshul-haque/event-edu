@@ -15,7 +15,7 @@ const ErrorPage = () => {
         The resource requested could not be found on this server!
       </p>
       <button
-        className="bg-red-500 py-2 px-3 text-white font-bold rounded-md"
+        className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded uppercase text-white font-medium"
         onClick={handleGoBack}
       >
         Go Back
