@@ -20,16 +20,6 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/destination"
-          className={({ isActive }) =>
-            isActive ? "text-red-500 underline active" : ""
-          }
-        >
-          About Us
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
           to="/contact"
           className={({ isActive }) =>
             isActive ? "text-red-500 underline active" : ""

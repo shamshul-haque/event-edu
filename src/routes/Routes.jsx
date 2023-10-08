@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Contact from "../components/header/navbar/Contact";
 import Gallery from "../components/header/navbar/Gallery";
 import Login from "../components/header/navbar/auth/Login";
 import Register from "../components/header/navbar/auth/Register";
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/serviceDetails/:id",
