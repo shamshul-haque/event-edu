@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Facility from "./Facility";
 
 const ServiceDetails = () => {
   const servicesData = useLoaderData();
@@ -25,11 +26,9 @@ const ServiceDetails = () => {
         <div>
           <h2 className="font-bold text-xl">Facilities:</h2>
           <ul className="list-disc">
-            <li className="ml-10">{item.details_description.facilities[0]}</li>
-            <li className="ml-10">{item.details_description.facilities[1]}</li>
-            <li className="ml-10">{item.details_description.facilities[2]}</li>
-            <li className="ml-10">{item.details_description.facilities[3]}</li>
-            <li className="ml-10">{item.details_description.facilities[4]}</li>
+            {item.details_description.facilities.map((facility, index) => (
+              <Facility key={index} facility={facility} />
+            ))}
           </ul>
         </div>
       </div>
