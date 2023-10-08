@@ -3,7 +3,7 @@ import Gallery from "../components/header/navbar/Gallery";
 import Login from "../components/header/navbar/auth/Login";
 import Register from "../components/header/navbar/auth/Register";
 import Home from "../components/home/Home";
-import ServiceDetails from "../components/home/ServiceDetails";
+import ServiceDetails from "../components/home/services/ServiceDetails";
 import ErrorPage from "../errorPage/ErrorPage";
 import Root from "../layout/Root";
 

@@ -1,5 +1,5 @@
 import Slider from "../header/banner/Slider";
-import Services from "./Services";
+import Services from "./services/Services";
 
 const Home = () => {
   return (
