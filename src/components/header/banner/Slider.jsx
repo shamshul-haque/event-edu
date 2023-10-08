@@ -4,8 +4,7 @@ import { MdEventSeat } from "react-icons/md";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import slider1 from "../../../assets/slider1.png";
 import slider2 from "../../../assets/slider2.png";
@@ -19,10 +18,9 @@ const Slider = () => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Navigation, Autoplay]}
         navigation
         autoplay={true}
-        pagination={{ clickable: true }}
         loop
       >
         <SwiperSlide>

@@ -35,7 +35,17 @@ const Navbar = () => {
             isActive ? "text-red-500 underline active" : ""
           }
         >
-          Contact Us
+          Contact
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/gallery"
+          className={({ isActive }) =>
+            isActive ? "text-red-500 underline active" : ""
+          }
+        >
+          Gallery
         </NavLink>
       </li>
     </>

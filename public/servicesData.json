@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "name": "Workshops and Webinars",
+    "image": "https://i.ibb.co/f9py4m9/workshop-Webinars.png",
+    "price": "$350",
+    "short_description": "Enhance your skills with hands-on workshops and insightful webinars.",
+    "details_description": {
+      "overview": "Join our workshops and webinars to learn from experts in various fields. These events provide a unique opportunity to gain valuable knowledge and practical skills. Whether you're a seasoned professional looking to stay updated with the latest industry trends or a newcomer eager to learn, our workshops and webinars cater to all levels of expertise.Our experienced presenters will guide you through engaging sessions, covering a wide range of topics. From technology and business to personal development and beyond, there's something for everyone.With flexible scheduling, you can easily fit these events into your busy life. Plus, our online platform ensures accessibility from anywhere in the world.Don't miss out on the chance to connect with like-minded individuals, expand your network, and invest in your personal and professional growth.",
+      "facilities": [
+        "High-quality video streaming and webinar software",
+        "Interactive Q&A sessions with presenters",
+        "Access to recorded sessions for later viewing",
+        "Discussion forums for networking and sharing insights",
+        "Certification and accreditation options for certain workshops"
+      ]
+    },
+    "button_text": "View Details"
+  },
+  {
+    "id": 2,
+    "name": "Career Fairs",
+    "image": "https://i.ibb.co/Jtz05sh/carrer-Fairs.jpg",
+    "price": "$400",
+    "short_description": "Explore job opportunities and network with top employers at our career fairs.",
+    "details_description": {
+      "overview": "Our career fairs are your gateway to exciting job opportunities and valuable networking experiences. Whether you're a recent graduate looking to kick-start your career or a seasoned professional seeking new challenges, our events are tailored to meet your needs.At the career fair, you'll have the chance to connect with industry-leading companies actively seeking talent like you. Bring your resume and engage in on-site interviews and career consultations. Our team of experts will provide valuable insights and help you make a lasting impression.Additionally, our keynote speakers will share their wisdom and offer valuable career advice. They'll inspire you to reach your full potential and navigate the ever-evolving job market with confidence.Invest in your future and join us at our career fairs for a day of opportunity and growth.",
+      "facilities": [
+        "Booths for company presentations and recruitment",
+        "On-site resume review and interview preparation",
+        "Networking lounges for informal connections",
+        "Access to job postings and company profiles",
+        "Career counseling and guidance services"
+      ],
+      "speakers": [
+        {
+          "name": "Sarah Johnson",
+          "designation": "HR Director",
+          "image": "https://i.ibb.co/xyz123/sarah-johnson.jpg"
+        },
+        {
+          "name": "Michael Anderson",
+          "designation": "Career Coach",
+          "image": "https://i.ibb.co/xyz456/michael-anderson.jpg"
+        },
+        {
+          "name": "Emily Clark",
+          "designation": "Tech Industry Expert",
+          "image": "https://i.ibb.co/xyz789/emily-clark.jpg"
+        }
+      ]
+    },
+    "button_text": "View Details"
+  },
+  {
+    "id": 3,
+    "name": "Educational Conferences",
+    "image": "https://i.ibb.co/WVkJp0x/educational-Conference.jpg",
+    "price": "$450",
+    "short_description": "Stay updated with the latest trends and research at our educational conferences.",
+    "details_description": {
+      "overview": "Our educational conferences are a hub for knowledge seekers and forward-thinkers. Join us to explore the latest trends, research findings, and innovative ideas in your field of interest.These conferences provide a unique platform to interact with like-minded individuals, including researchers, industry experts, and fellow enthusiasts. Attend sessions and workshops that delve deep into specific subjects and gain insights that will benefit your career or academic pursuits.With state-of-the-art facilities and resources at your disposal, you'll have access to valuable information and networking opportunities. Meet the speakers and presenters who are at the forefront of their respective fields.Invest in your education and be part of a community that values learning and growth.",
+      "facilities": [
+        "Multiple lecture halls and breakout rooms",
+        "Networking lounges with refreshments",
+        "Access to presentation materials and research papers",
+        "Opportunities for collaboration and research partnerships",
+        "Live streaming and on-demand session access"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Lisa Anderson",
+          "designation": "Keynote Speaker",
+          "image": "https://i.ibb.co/xyz123/lisa-anderson.jpg"
+        },
+        {
+          "name": "Robert Davis",
+          "designation": "Technology Innovator",
+          "image": "https://i.ibb.co/xyz456/robert-davis.jpg"
+        },
+        {
+          "name": "Julia Wilson",
+          "designation": "Research Scientist",
+          "image": "https://i.ibb.co/xyz789/julia-wilson.jpg"
+        }
+      ]
+    },
+    "button_text": "View Details"
+  },
+  {
+    "id": 4,
+    "name": "Coding Bootcamps",
+    "image": "https://i.ibb.co/QfVn5fq/coding-Bootcamps.jpg",
+    "price": "$500",
+    "short_description": "Learn coding and programming through intensive bootcamp programs.",
+    "details_description": {
+      "overview": "Our coding bootcamps are your fast track to becoming a skilled coder or programmer. These intensive programs are designed to equip you with the knowledge and hands-on experience you need to excel in the tech industry.During the bootcamp, you'll have access to cutting-edge tools and resources, along with guidance from experienced instructors. Dive into coding challenges and real-world projects, honing your skills with practical application.Our instructors are industry professionals who bring their real-world expertise to the classroom. They'll mentor you and provide insights that go beyond the textbooks.If you're passionate about technology and eager to launch your coding career, our bootcamps are the perfect starting point. Join us and embark on your coding journey today.",
+      "facilities": [
+        "State-of-the-art computer labs with powerful workstations",
+        "Access to a comprehensive library of coding resources",
+        "One-on-one mentoring and code review sessions",
+        "Collaborative coding projects with fellow participants",
+        "Opportunities to work on real-world coding challenges"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Mark Taylor",
+          "designation": "Lead Instructor",
+          "image": "https://i.ibb.co/xyz123/mark-taylor.jpg"
+        },
+        {
+          "name": "Anna Rodriguez",
+          "designation": "Software Architect",
+          "image": "https://i.ibb.co/xyz456/anna-rodriguez.jpg"
+        },
+        {
+          "name": "Samuel Carter",
+          "designation": "Machine Learning Expert",
+          "image": "https://i.ibb.co/xyz789/samuel-carter.jpg"
+        }
+      ]
+    },
+    "button_text": "View Details"
+  },
+  {
+    "id": 5,
+    "name": "Networking Events",
+    "image": "https://i.ibb.co/MD3hLWR/networking-Events.jpg",
+    "price": "$350",
+    "short_description": "Expand your professional network at our networking events.",
+    "details_description": {
+      "overview": "Our networking events are where connections are forged, ideas are exchanged, and opportunities are created. Whether you're an entrepreneur, a job seeker, or a professional looking to expand your network, our events provide the ideal platform.Engage in structured networking activities, discussions, and icebreakers that make connecting with others effortless. Share your experiences, learn from industry experts, and build relationships that can propel your career or business forward.Our guest speakers are accomplished professionals who will share insights on effective networking, personal branding, and career development. Join us and take your networking skills to the next level.Invest in your network, and you're investing in your future success.",
+      "facilities": [
+        "Designated networking areas with comfortable seating",
+        "Icebreaker activities and structured networking sessions",
+        "Access to contact information and profiles of attendees",
+        "Refreshments and snacks during networking breaks",
+        "Professional networking guidance and tips from experts"
+      ],
+      "speakers": [
+        {
+          "name": "Chris Evans",
+          "designation": "Networking Guru",
+          "image": "https://i.ibb.co/xyz123/chris-evans.jpg"
+        },
+        {
+          "name": "Sophia Adams",
+          "designation": "Career Coach",
+          "image": "https://i.ibb.co/xyz456/sophia-adams.jpg"
+        },
+        {
+          "name": "Daniel Lee",
+          "designation": "Business Leader",
+          "image": "https://i.ibb.co/xyz789/daniel-lee.jpg"
+        }
+      ]
+    },
+    "button_text": "View Details"
+  },
+  {
+    "id": 6,
+    "name": "Hackathons",
+    "image": "https://i.ibb.co/gd6vMVn/hackathon.jpg",
+    "price": "$400",
+    "short_description": "Compete in coding challenges and build innovative solutions at our hackathons.",
+    "details_description": {
+      "overview": "Our hackathons are where innovation meets competition. These high-energy events challenge participants to solve real-world problems, demonstrate their coding skills, and build innovative solutions.You'll have access to development tools, APIs, and mentorship from experienced developers and entrepreneurs. Work alongside like-minded individuals, form teams, and create solutions that could change the world.Our judges, mentors, and guest speakers are accomplished professionals who will provide valuable feedback and insights. Whether you're a seasoned coder or a novice, our hackathons offer a supportive environment to learn and excel.Join us for an unforgettable experience of creativity, collaboration, and coding.",
+      "facilities": [
+        "Fully equipped hackathon workspaces with power outlets",
+        "Access to a wide range of software development tools",
+        "Mentorship from experienced developers and entrepreneurs",
+        "Continuous refreshments and snacks to fuel your creativity",
+        "Opportunities to showcase your projects and innovations"
+      ],
+      "speakers": [
+        {
+          "name": "Eleanor Green",
+          "designation": "Tech Innovator",
+          "image": "https://i.ibb.co/xyz123/eleanor-green.jpg"
+        },
+        {
+          "name": "William Foster",
+          "designation": "Coding Expert",
+          "image": "https://i.ibb.co/xyz456/william-foster.jpg"
+        },
+        {
+          "name": "Olivia Turner",
+          "designation": "AI Specialist",
+          "image": "https://i.ibb.co/xyz789/olivia-turner.jpg"
+        }
+      ]
+    },
+    "button_text": "View Details"
+  }
+]

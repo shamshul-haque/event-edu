@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const Timer = () => {
   const initialDays = 6;
-  const initialHours = 59;
+  const initialHours = 23;
   const initialMinutes = 59;
   const initialSeconds = 60;
 
