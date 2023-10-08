@@ -55,11 +55,6 @@ const Navbar = () => {
           <ul className="flex gap-5 px-1 uppercase">{links}</ul>
           <Link to="/login">
             <button className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium">
-              Get Ticket
-            </button>
-          </Link>
-          <Link to="/login">
-            <button className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium">
               Login
             </button>
           </Link>
@@ -78,12 +73,7 @@ const Navbar = () => {
           >
             {links}
             <Link to="/login">
-              <button className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium">
-                Get Ticket
-              </button>
-            </Link>
-            <Link to="/login">
-              <button className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium my-3">
+              <button className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3">
                 Login
               </button>
             </Link>
