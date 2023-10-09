@@ -1,10 +1,11 @@
+import { updateProfile } from "firebase/auth";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../../provider/AuthProvider";
 import SocialLogin from "./SocialLogin";
 
 const Register = () => {
-  const { registerUser } = useContext(AuthContext);
+  const { registerUser, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleRegistration = (e) => {
@@ -13,13 +14,18 @@ const Register = () => {
     const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
+    const photo = form.get("photo");
     e.currentTarget.reset();
-    console.log(name, email, password);
 
     registerUser(email, password)
       .then((result) => {
-        console.log(result.user);
-        navigate("/");
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photo,
+        });
+        logOut().then(() => {
+          navigate("/login");
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -59,6 +65,14 @@ const Register = () => {
                 placeholder="Password"
                 className="outline-0 border-b py-2 text-sm"
                 required
+              />
+            </div>
+            <div className="form-control">
+              <input
+                type="url"
+                name="photo"
+                placeholder="Photo URL"
+                className="outline-0 border-b py-2 text-sm"
               />
             </div>
             <div className="flex gap-1">
