@@ -8,6 +8,7 @@ import { AuthContext } from "../../../provider/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [profileMenu, setProfileMenu] = useState(false);
 
   const handleLogOut = () => {
     logOut().then(() => {
@@ -54,7 +55,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="sticky top-0 z-10 bg-white bg-opacity-40">
+    <div className="sticky top-0 z-10 bg-white bg-opacity-60">
       <div className="flex items-center justify-between mx-4 md:mx-8 lg:mx-16 py-5">
         <div className="flex items-center">
           <img src={logo} alt="logo" className="w-12" />
@@ -67,15 +68,38 @@ const Navbar = () => {
           <ul className="flex gap-5 px-1 uppercase">{links}</ul>
           <div>
             {user ? (
-              <>
-                <Link
-                  to="/login"
-                  onClick={handleLogOut}
-                  className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3"
+              <div>
+                <div
+                  onClick={() => setProfileMenu(!profileMenu)}
+                  className="cursor-pointer"
                 >
-                  Log Out
-                </Link>
-              </>
+                  {user.photoURL && (
+                    <img
+                      src={user.photoURL}
+                      alt="profile"
+                      className="w-10 rounded-full"
+                    />
+                  )}
+                </div>
+                {profileMenu && (
+                  <ul
+                    className={`absolute right-20 bg-white bg-opacity-80 rounded-lg p-5 text-center ${
+                      profileMenu ? `top-16` : `-top-60`
+                    } duration-1000 z-50 uppercase`}
+                  >
+                    <li className="font-bold pb-3">{user.displayName}</li>
+                    <li>
+                      <Link
+                        to="/login"
+                        onClick={handleLogOut}
+                        className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium"
+                      >
+                        Log Out
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
             ) : (
               <Link
                 to="/login"
@@ -94,22 +118,30 @@ const Navbar = () => {
             {toggleMenu === true ? <AiOutlineClose /> : <AiOutlineMenu />}
           </div>
           <ul
-            className={`absolute right-8 bg-white bg-opacity-40 rounded-lg p-5 ${
+            className={`absolute right-8 bg-white bg-opacity-80 rounded-lg p-5 ${
               toggleMenu ? `top-12` : `-top-60`
             } duration-1000 z-10 uppercase space-y-1`}
           >
-            {links}
+            <li className="flex justify-center">
+              <img
+                src={user.photoURL}
+                alt="profile"
+                className="w-10 rounded-full"
+              />
+            </li>
+            <li className="font-bold">{user.displayName}</li>
+            <div className="text-center space-y-2">{links}</div>
             <div>
               {user ? (
-                <>
+                <div className="text-center mt-5">
                   <Link
                     to="/login"
                     onClick={handleLogOut}
-                    className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3"
+                    className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium"
                   >
                     Log Out
                   </Link>
-                </>
+                </div>
               ) : (
                 <Link
                   to="/login"
