@@ -18,9 +18,10 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 
+- A: `{}`
 
-<i>Write your explanation here</i>
+<i>Initially the value `greeting` is  undefined. Then the value of `greeting` is updated by an empty object. So the console will show `{}` as output.</i>
 
 </p>
 </details>
@@ -43,9 +44,10 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 
+- C: `"12"`
 
-<i>Write your explanation here</i>
+<i>The output should be `12` which is string. When sum(1, "2") function is called it send two value 1 and "2" where 1 is number but 2 is string. When a number and a string perform addition, it concatenate them and return a string. So the output should be `12`.</i>
 
 </p>
 </details>
@@ -69,9 +71,10 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 
+- A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
+<i>Changing info.favoriteFood doesn't modify the food array. So the console will show `['🍕', '🍫', '🥑', '🍔']` as output.</i>
 
 </p>
 </details>
@@ -94,9 +97,10 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 
+- B: `Hi there, undefined`
 
-<i>Write your explanation here</i>
+<i>The answer is `Hi there, undefined` because when sayHi() function called it doesn't pass any value, that's why name parameter gets undefined value and sayHi() function return `Hi there, undefined`.</i>
 
 </p>
 </details>
@@ -122,9 +126,10 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: 
+- C: 3
 
-<i>Write your explanation here</i>
+<i>The answer is 3 because the array have three truthy value (1, 2, 3) and count variable do count from the nums array.</i>
 
 </p>
 </details>
