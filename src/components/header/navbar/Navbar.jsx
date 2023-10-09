@@ -8,7 +8,6 @@ import { AuthContext } from "../../../provider/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [profileMenu, setProfileMenu] = useState(false);
 
   const handleLogOut = () => {
     logOut().then(() => {
@@ -68,37 +67,27 @@ const Navbar = () => {
           <ul className="flex gap-5 px-1 uppercase">{links}</ul>
           <div>
             {user ? (
-              <div>
-                <div
-                  onClick={() => setProfileMenu(!profileMenu)}
-                  className="cursor-pointer"
+              <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user.photoURL} alt="profile" />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="z-20 menu dropdown-content bg-fuchsia-500 bg-opacity-80 p-3 rounded-box text-center w-40"
                 >
-                  {user.photoURL && (
-                    <img
-                      src={user.photoURL}
-                      alt="profile"
-                      className="w-10 h-10 rounded-full"
-                    />
-                  )}
-                </div>
-                {profileMenu && (
-                  <ul
-                    className={`absolute right-20 bg-white bg-opacity-80 rounded-lg p-5 text-center ${
-                      profileMenu ? `top-16` : `-top-60`
-                    } duration-1000 z-50 uppercase`}
+                  <li className="font-bold pb-3 uppercase">
+                    {user.displayName}
+                  </li>
+                  <Link
+                    to="/login"
+                    onClick={handleLogOut}
+                    className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded uppercase text-white font-medium text-center"
                   >
-                    <li className="font-bold pb-3">{user.displayName}</li>
-                    <li>
-                      <Link
-                        to="/login"
-                        onClick={handleLogOut}
-                        className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium"
-                      >
-                        Log Out
-                      </Link>
-                    </li>
-                  </ul>
-                )}
+                    Log Out
+                  </Link>
+                </ul>
               </div>
             ) : (
               <Link
@@ -118,7 +107,7 @@ const Navbar = () => {
             {toggleMenu === true ? <AiOutlineClose /> : <AiOutlineMenu />}
           </div>
           <ul
-            className={`absolute right-8 bg-white bg-opacity-80 rounded-lg p-5 ${
+            className={`absolute right-8 bg-fuchsia-500 bg-opacity-80 rounded-lg p-5 ${
               toggleMenu ? `top-12` : `-top-60`
             } duration-1000 z-10 uppercase space-y-1`}
           >
@@ -136,10 +125,10 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            {links}
+            <div className="pb-3">{links}</div>
             <div>
               {user ? (
-                <div className="text-center mt-5">
+                <div className="text-center">
                   <Link
                     to="/login"
                     onClick={handleLogOut}
@@ -151,7 +140,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   to="/login"
-                  className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3"
+                  className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium"
                 >
                   Login
                 </Link>

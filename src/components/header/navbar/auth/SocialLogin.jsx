@@ -1,20 +1,26 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../../provider/AuthProvider";
 
 const SocialLogin = () => {
   const { googleLogIn } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from || "/";
 
   const handleGoogleSignIn = () => {
-    googleLogIn().then(() => {
+    googleLogIn().then((result) => {
+      if (result.user) {
+        navigate(from, {
+          replace: true,
+        });
+      }
       toast.success("Login successfully!", {
         position: "top-center",
         theme: "colored",
       });
-      navigate("/");
     });
   };
 

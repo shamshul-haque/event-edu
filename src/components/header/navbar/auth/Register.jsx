@@ -19,12 +19,12 @@ const Register = () => {
     e.currentTarget.reset();
 
     if (
-      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(
+      !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-])[A-Za-z0-9!@#$%^&*()_+{}[\]:;<>,.?~\\-]{6,}$/.test(
         password
       )
     ) {
       toast.error(
-        "Password must include one uppercase, lowercase, number, special character and length should be at least six!",
+        "Password must include one uppercase & special character and length should be at least six!",
         {
           position: "top-center",
           theme: "colored",
