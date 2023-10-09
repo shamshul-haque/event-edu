@@ -1,27 +1,20 @@
 [
-    {
-      "id": 1,
-      "name": "John Smith",
-      "picture": "https://i.ibb.co/KbnKjYQ/sarah-Johnson.png",
-      "designation": "Public Speaker"
-    },
-    {
-      "id": 2,
-      "name": "Sarah Johnson",
-      "picture": "https://i.ibb.co/rpsNpVt/john-Smith.png",
-      "designation": "Panel Moderator"
-    },
-    {
-        "id": 3,
-        "name": "Emily Davis",
-        "picture": "https://i.ibb.co/PNnxJG3/emily-Davis.jpg",
-        "designation": "Workshop Facilitator"
-      },
-    {
-      "id": 4,
-      "name": "Michael Lee",
-      "picture": "https://i.ibb.co/HCtVSCW/michael-Lee.png",
-      "designation": "Technology Innovator"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "John Smith",
+    "picture": "https://i.ibb.co/KbnKjYQ/sarah-Johnson.png",
+    "designation": "Public Speaker"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Johnson",
+    "picture": "https://i.ibb.co/rpsNpVt/john-Smith.png",
+    "designation": "Panel Moderator"
+  },
+  {
+    "id": 3,
+    "name": "Emily Davis",
+    "picture": "https://i.ibb.co/PNnxJG3/emily-Davis.jpg",
+    "designation": "Workshop Facilitator"
+  }
+]
