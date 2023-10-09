@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("successful");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const links = (
     <>
@@ -53,11 +65,26 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex items-center gap-5">
           <ul className="flex gap-5 px-1 uppercase">{links}</ul>
-          <Link to="/login">
-            <button className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium">
-              Login
-            </button>
-          </Link>
+          <div>
+            {user ? (
+              <>
+                <Link
+                  to="/login"
+                  onClick={handleLogOut}
+                  className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3"
+                >
+                  Log Out
+                </Link>
+              </>
+            ) : (
+              <Link
+                to="/login"
+                className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3"
+              >
+                Login
+              </Link>
+            )}
+          </div>
         </div>
         <div className="lg:hidden flex">
           <div
@@ -72,11 +99,26 @@ const Navbar = () => {
             } duration-1000 z-10 uppercase space-y-1`}
           >
             {links}
-            <Link to="/login">
-              <button className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3">
-                Login
-              </button>
-            </Link>
+            <div>
+              {user ? (
+                <>
+                  <Link
+                    to="/login"
+                    onClick={handleLogOut}
+                    className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3"
+                  >
+                    Log Out
+                  </Link>
+                </>
+              ) : (
+                <Link
+                  to="/login"
+                  className="px-4 py-2 bg-red-500 hover:bg-transparent hover:border hover: border-red-500 hover:text-black transition-all duration-300 rounded w-full uppercase text-white font-medium mt-3"
+                >
+                  Login
+                </Link>
+              )}
+            </div>
           </ul>
         </div>
       </div>
