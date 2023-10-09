@@ -2,7 +2,7 @@
 
 EventEdu is your premier event management partner specializing in creating seamless and unforgettable experiences for clients in the education and training sector. From conferences and workshops to seminars and webinars, we bring your educational events to life with precision and expertise. 
 
-Click to explore and engage with us: [EventEdu]()
+Click to explore and engage with us: [EventEdu](https://event-management-9b263.web.app)
 
 # Project Features
 
