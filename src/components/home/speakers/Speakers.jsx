@@ -18,7 +18,7 @@ const Speakers = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold">
         Talented Speakers
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
         {speakers.map((speaker) => (
           <SpeakerItem key={speaker.id} speaker={speaker} />
         ))}
