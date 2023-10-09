@@ -1,11 +1,21 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
-    <footer className="px-4 md:px-8 lg:px-16 py-10 mt-10 bg-fuchsia-200">
+    <footer
+      className="px-4 md:px-8 lg:px-16 py-10 mt-10 bg-fuchsia-200"
+      data-aos="zoom-in"
+    >
       <div className="flex flex-col md:flex-row justify-between gap-5">
         <div className="space-y-3">
           <div className="flex items-center">

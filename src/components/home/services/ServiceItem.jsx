@@ -1,11 +1,18 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
 import PropTypes from "prop-types";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ServiceItem = ({ service }) => {
   const { id, image, name, short_description, price, button_text } = service;
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div className="bg-white shadow-lg rounded ">
+    <div className="bg-white shadow-lg rounded" data-aos="flip-right">
       <img src={image} alt={name} className="h-52 w-full rounded" />
       <div className="text-center p-5">
         <h1 className="font-bold text-2xl">{name}</h1>

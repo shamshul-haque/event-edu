@@ -1,13 +1,20 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import jonathon from "../../../assets/jonathon.png";
 
 const UpcomingEvent = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div className="px-4 md:px-8 lg:px-16 py-10">
+    <div className="px-4 md:px-8 lg:px-16 py-10" data-aos="fade-down">
       <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold">
         Upcoming Event
       </h1>
       <div className="border border-red-500 rounded mt-6 flex flex-col lg:flex-row gap-5">
-        <div className="w-full lg:w-[40%] bg-red-500">
+        <div className="w-full lg:w-[40%] bg-red-500" data-aos="flip-left">
           <h2 className="text-center text-3xl font-bold pt-5">14th Oct 2023</h2>
           <p className="uppercase font-bold text-center">10.00 am - 3.00 pm</p>
           <div className="flex justify-between">
@@ -20,7 +27,7 @@ const UpcomingEvent = () => {
             </div>
           </div>
         </div>
-        <div className="p-5 md:p-10">
+        <div className="p-5 md:p-10" data-aos="flip-right">
           <h2 className="font-bold text-2xl text-red-500">Career Fairs</h2>
           <p className="ml-5 text-justify">
             Explore job opportunities and network with top employers at our
