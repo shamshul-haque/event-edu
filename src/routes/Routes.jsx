@@ -7,6 +7,7 @@ import Home from "../components/home/Home";
 import ServiceDetails from "../components/home/services/ServiceDetails";
 import ErrorPage from "../errorPage/ErrorPage";
 import Root from "../layout/Root";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -20,16 +21,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: (
+          <PrivateRoutes>
+            <Contact />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/serviceDetails/:id",
-        element: <ServiceDetails />,
+        element: (
+          <PrivateRoutes>
+            <ServiceDetails />
+          </PrivateRoutes>
+        ),
         loader: () => fetch("/servicesData.json"),
       },
       {
         path: "/gallery",
-        element: <Gallery />,
+        element: (
+          <PrivateRoutes>
+            <Gallery />
+          </PrivateRoutes>
+        ),
         loader: () => fetch("/servicesData.json"),
       },
       {
