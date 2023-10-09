@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../../provider/AuthProvider";
@@ -38,6 +39,9 @@ const Login = () => {
   };
   return (
     <div className="mx-4 md:mx-8 lg:mx-16">
+      <Helmet>
+        <title>EventEdu | Login</title>
+      </Helmet>
       <div className="flex flex-col items-center">
         <div className="w-full max-w-sm border rounded p-5">
           <h1 className="text-2xl font-bold text-center uppercase">Login</h1>

@@ -1,4 +1,5 @@
 import { Map, Marker } from "pigeon-maps";
+import { Helmet } from "react-helmet-async";
 import { AiFillMail } from "react-icons/ai";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
@@ -6,6 +7,9 @@ import { GoLocation } from "react-icons/go";
 const Contact = () => {
   return (
     <div className="px-4 md:px-8 lg:px-16 pt-10">
+      <Helmet>
+        <title>EventEdu | Contact</title>
+      </Helmet>
       <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-black">
         Contact With Us
       </h1>

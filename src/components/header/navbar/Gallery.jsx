@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
 const Gallery = () => {
   const servicesData = useLoaderData();
   return (
     <div className=" px-4 md:px-8 lg:px-16 py-10">
+      <Helmet>
+        <title>EventEdu | Gallery</title>
+      </Helmet>
       <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-black">
         Our Photo Gallery
       </h1>

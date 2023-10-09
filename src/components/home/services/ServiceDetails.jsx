@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 import Facility from "./Facility";
 
@@ -9,6 +10,9 @@ const ServiceDetails = () => {
 
   return (
     <div className="px-4 md:px-8 lg:px-16">
+      <Helmet>
+        <title>EventEdu | Service Details</title>
+      </Helmet>
       <img
         src={item.image}
         alt={item.name}
