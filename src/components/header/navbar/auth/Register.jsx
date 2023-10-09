@@ -1,6 +1,7 @@
 import { updateProfile } from "firebase/auth";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../../../provider/AuthProvider";
 import SocialLogin from "./SocialLogin";
 
@@ -17,19 +18,34 @@ const Register = () => {
     const photo = form.get("photo");
     e.currentTarget.reset();
 
-    registerUser(email, password)
-      .then((result) => {
-        updateProfile(result.user, {
-          displayName: name,
-          photoURL: photo,
-        });
-        logOut().then(() => {
-          navigate("/login");
-        });
-      })
-      .catch((error) => {
-        console.log(error);
+    if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(
+        password
+      )
+    ) {
+      toast.error(
+        "Password must include one uppercase, lowercase, number, special character and length should be at least six!",
+        {
+          position: "top-center",
+          theme: "colored",
+        }
+      );
+      return;
+    }
+
+    registerUser(email, password).then((result) => {
+      updateProfile(result.user, {
+        displayName: name,
+        photoURL: photo,
       });
+      logOut().then(() => {
+        navigate("/login");
+      });
+      toast.success("Your profile created successfully. Please login now!", {
+        position: "top-center",
+        theme: "colored",
+      });
+    });
   };
 
   return (
@@ -73,6 +89,7 @@ const Register = () => {
                 name="photo"
                 placeholder="Photo URL"
                 className="outline-0 border-b py-2 text-sm"
+                required
               />
             </div>
             <div className="flex gap-1">
