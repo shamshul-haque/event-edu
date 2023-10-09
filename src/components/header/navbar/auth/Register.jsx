@@ -1,7 +1,31 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../../provider/AuthProvider";
 import SocialLogin from "./SocialLogin";
 
 const Register = () => {
+  const { registerUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleRegistration = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const email = form.get("email");
+    const password = form.get("password");
+    e.currentTarget.reset();
+    console.log(name, email, password);
+
+    registerUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="mx-4 md:mx-8 lg:mx-16">
       <div className="flex flex-col items-center">
@@ -9,7 +33,7 @@ const Register = () => {
           <h1 className="text-2xl font-bold text-center uppercase">
             Create Account
           </h1>
-          <form className="mt-5 space-y-5">
+          <form onSubmit={handleRegistration} className="mt-5 space-y-5">
             <div className="form-control">
               <input
                 type="text"

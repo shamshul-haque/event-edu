@@ -1,5 +1,6 @@
 import {
   GoogleAuthProvider,
+  createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithPopup,
   signOut,
@@ -14,6 +15,10 @@ const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+
+  const registerUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
 
   const googleLogIn = () => {
     return signInWithPopup(auth, googleProvider);
@@ -33,9 +38,10 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const authInfo = {
-    user,
+    registerUser,
     googleLogIn,
     logOut,
+    user,
   };
   return (
     <div>
