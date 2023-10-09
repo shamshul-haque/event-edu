@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../../../provider/AuthProvider";
 import SocialLogin from "./SocialLogin";
 
@@ -15,12 +16,18 @@ const Login = () => {
     e.currentTarget.reset();
 
     logIn(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        toast.success("Login successfully!", {
+          position: "top-center",
+          theme: "colored",
+        });
         navigate("/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        toast.error("Please provide correct email and password!", {
+          position: "top-center",
+          theme: "colored",
+        });
       });
   };
   return (
