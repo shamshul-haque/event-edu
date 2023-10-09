@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
 import logo from "../../../assets/logo.png";
 import { AuthContext } from "../../../provider/AuthProvider";
 
@@ -9,13 +10,12 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleLogOut = () => {
-    logOut()
-      .then(() => {
-        console.log("successful");
-      })
-      .catch((error) => {
-        console.log(error);
+    logOut().then(() => {
+      toast.success("Log Out successfully!", {
+        position: "top-center",
+        theme: "colored",
       });
+    });
   };
 
   const links = (

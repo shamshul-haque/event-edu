@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../../../provider/AuthProvider";
 
 const SocialLogin = () => {
@@ -8,14 +9,13 @@ const SocialLogin = () => {
   const navigate = useNavigate();
 
   const handleGoogleSignIn = () => {
-    googleLogIn()
-      .then((res) => {
-        console.log(res.user);
-        navigate("/");
-      })
-      .catch((error) => {
-        console.log(error);
+    googleLogIn().then(() => {
+      toast.success("Login successfully!", {
+        position: "top-center",
+        theme: "colored",
       });
+      navigate("/");
+    });
   };
 
   return (
