@@ -77,7 +77,7 @@ const Navbar = () => {
                     <img
                       src={user.photoURL}
                       alt="profile"
-                      className="w-10 rounded-full"
+                      className="w-10 h-10 rounded-full"
                     />
                   )}
                 </div>
@@ -122,15 +122,21 @@ const Navbar = () => {
               toggleMenu ? `top-12` : `-top-60`
             } duration-1000 z-10 uppercase space-y-1`}
           >
-            <li className="flex justify-center">
-              <img
-                src={user.photoURL}
-                alt="profile"
-                className="w-10 rounded-full"
-              />
-            </li>
-            <li className="font-bold">{user.displayName}</li>
-            <div className="text-center space-y-2">{links}</div>
+            <div>
+              {user && (
+                <div>
+                  <li className="flex justify-center">
+                    <img
+                      src={user.photoURL}
+                      alt="profile"
+                      className="w-10 h-10 rounded-full"
+                    />
+                  </li>
+                  <li className="font-bold">{user.displayName}</li>
+                </div>
+              )}
+            </div>
+            {links}
             <div>
               {user ? (
                 <div className="text-center mt-5">
